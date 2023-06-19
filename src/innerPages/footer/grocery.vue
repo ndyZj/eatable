@@ -1,14 +1,22 @@
 <template>
     <div id="grocery">
         <ul id="menu">
-            <li >
+            <li>
                 <router-link to="/grocery" id="groceryMenu">Grocery</router-link>
             </li>
-            <li >
+            <li>
                 <router-link to="/inventory" id="inventoryMenu">Inventory</router-link>
             </li>
         </ul>
-        <button>Create new Grocery List</button>
+
+        <ul>
+            <li id="newList">
+                <router-link to="/grocery/editGrocery" style="text-decoration: none; color: white;">
+                    Create new Grocery List
+                </router-link>
+            </li>
+        </ul>
+
         <div>
             <ul>
                 <li id="list">
@@ -17,8 +25,14 @@
                         <li>dd/mm/yyyy</li>
                         <li>10 items</li>
                     </ul>
-                    <div id="editBtn"><img src="../../assets/Icon/edit.svg"></div>
-                    <div id="deleteBtn"><img src="../../assets/Icon/delete-B.svg"></div>
+                    <router-link to="/grocery/editGrocery" id="editBtn">
+                        <img src="../../assets/Icon/edit.svg">
+                    </router-link>
+
+                    <!-- fake button -->
+                    <router-link to="" id="deleteBtn">
+                        <img src="../../assets/Icon/delete-B.svg">
+                    </router-link>
                 </li>
                 <li id="list">
                     <div id="circle"></div>
@@ -26,8 +40,14 @@
                         <li>dd/mm/yyyy</li>
                         <li>5 items</li>
                     </ul>
-                    <div id="editBtn"><img src="../../assets/Icon/edit.svg"></div>
-                    <div id="deleteBtn"><img src="../../assets/Icon/delete-B.svg"></div>
+                    <router-link to="/grocery/editGrocery" id="editBtn">
+                        <img src="../../assets/Icon/edit.svg">
+                    </router-link>
+
+                    <!-- fake button -->
+                    <router-link to="" id="deleteBtn">
+                        <img src="../../assets/Icon/delete-B.svg">
+                    </router-link>
                 </li>
             </ul>
         </div>
@@ -36,13 +56,13 @@
 
 <script>
 export default ({
-    components:{
-    
+    components: {
+
     },
     name: 'grocery',
     data() {
         return {
-            
+
         }
     }
 })
@@ -50,28 +70,23 @@ export default ({
 </script>
 
 <style scoped>
-#grocery{
+#grocery {
     width: 100%;
     height: 500px;
     background-color: white;
 }
-#menu{
+
+#menu {
     width: 100%;
     height: 40px;
     background-color: #2f6d22;
     list-style: none;
 }
-#groceryMenu{
-    float: left;
-    width: 180px;
-    height: 40px;
-    text-align: center;
-    line-height: 40px;
-    color: white;
-    text-decoration: none; 
-    font-size: 14px;
+#menu>li:nth-child(1){
+    font-weight: bold;
 }
-#inventoryMenu{
+
+#groceryMenu {
     float: left;
     width: 180px;
     height: 40px;
@@ -79,20 +94,36 @@ export default ({
     line-height: 40px;
     color: white;
     text-decoration: none;
-    font-size: 14px; 
+    font-size: 14px;
+    border-bottom: #7bae63 solid 4px;
 }
-button {
-    background-color: #f27c00;
+
+#inventoryMenu {
+    float: left;
     width: 180px;
     height: 40px;
-    border-radius: 10px;
-    border: none;
+    text-align: center;
+    line-height: 40px;
     color: white;
-    margin-left: 90px;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    text-decoration: none;
+    font-size: 14px;
 }
-#list{
+
+#newList {
+    background-color: #f27c00;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 10px;
+    margin-left: 80px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    list-style: none;
+    font-size: 14px;
+}
+
+#list {
     background-color: rgb(123, 174, 99, 0.6);
     list-style: none;
     width: 300px;
@@ -104,7 +135,8 @@ button {
     padding-left: 15px;
     line-height: 25px;
 }
-#circle{
+
+#circle {
     border: white solid 2px;
     border-radius: 50%;
     width: 18px;
@@ -112,17 +144,20 @@ button {
     margin-top: 30px;
     float: left;
 }
-#circle:active{
+
+#circle:active {
     background-color: #f27c00;
 }
-#listText{
+
+#listText {
     list-style: none;
     margin-left: 15px;
     margin-top: 16px;
     float: left;
     font-size: 15px;
 }
-#editBtn{
+
+#editBtn {
     width: 25px;
     height: auto;
     position: relative;
@@ -130,7 +165,8 @@ button {
     top: 25px;
     float: left;
 }
-#deleteBtn{
+
+#deleteBtn {
     width: 25px;
     height: auto;
     position: relative;

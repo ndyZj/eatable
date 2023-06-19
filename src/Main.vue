@@ -1,59 +1,23 @@
 <template>
   <div id="app">
-    <div v-if="mainBanner"> 
+    <div v-if="mainBanner">
       <my-banner />
       <my-menuBar />
     </div>
     <div v-else>
       <my-backBanner />
     </div>
-    
+    <!-- <my-banner />
+    <my-menuBar /> -->
+
     <div v-if="router">
-      <!-- <div v-if="content"> -->
+      <router-view />
+    </div>
+    <div v-else>
       <my-content />
+      <!-- <my-grocery /> -->
     </div>
-    <div v-else="grocery">
-      <my-grocery />
-    </div>
-    <!-- <my-footer /> -->
-    <div id="footerMenu">
-      <ul id="icons">
-        <!-- #1 -->
-        <li>
-          <router-link to="/grocery" id="name" v-on:click="toGrocery">
-            <img src="./assets/Icon/cart.svg">
-            Grocery
-          </router-link>
-        </li>
-        <!-- #2 -->
-        <li>
-          <router-link to="/inventory" id="name">
-            <img src="./assets/Icon/box.svg">
-            Inventory
-          </router-link>
-        </li>
-        <!-- #3 -->
-        <li>
-          <router-link to="/upload" id="upload">
-            &#43;
-          </router-link>
-        </li>
-        <!-- #4 -->
-        <li>
-          <router-link to="/saved" id="name">
-            <img src="./assets/Icon/love.svg">
-            Saved
-          </router-link>
-        </li>
-        <!-- #5 -->
-        <li>
-          <router-link to="/notif" id="name">
-            <img src="./assets/Icon/bell.svg">
-            Notification
-          </router-link>
-        </li>
-      </ul>
-    </div>
+    <my-footer />
   </div>
 </template>
 
@@ -84,10 +48,9 @@ export default ({
   name: 'app',
   data() {
     return {
-      router : false,
+      router,
       grocery,
-
-      mainBanner : false,
+      mainBanner :false,
       backBanner,
       // content: true,
       // grocery: false
@@ -105,7 +68,10 @@ export default ({
 </script>
 
 <style>
-body, ul, li, div {
+body,
+ul,
+li,
+div {
   margin: 0px;
   padding: 0px;
 }
@@ -165,5 +131,4 @@ body, ul, li, div {
   color: #2f6d22;
   margin-right: 8px;
   margin-left: 5px;
-}
-</style>
+}</style>

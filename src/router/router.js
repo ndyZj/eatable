@@ -6,15 +6,15 @@ import home from '../Main.vue'
 import burgerMenu from '../innerPages/burgerMenu/burgerMenu.vue'
 import contentPic from '../innerPages/content/contentPic.vue'
 
-import backBanner from '../innerPages/footer/backBanner.vue'
+// import backBanner from '../innerPages/footer/backBanner.vue'
 
 import grocery from '../innerPages/footer/grocery.vue'
+import editGrocery from '../innerPages/footer/editGrocery.vue'
 
 import inventory from '../innerPages/footer/inventory.vue'
 import upload from '../innerPages/footer/upload.vue'
 import saved from '../innerPages/footer/saved.vue'
 import notif from '../innerPages/footer/notif.vue'
-// import VueRouter from 'vue-router'
 
 
 
@@ -57,32 +57,21 @@ export default new Router({
             name: 'contentPic',
             component: contentPic
         },
-        {
-            path: '/grocery/backBanner',
-            name: 'backBanner',
-            component: backBanner
-        },
+        // {
+        //     path: '/grocery/backBanner',
+        //     name: 'backBanner',
+        //     component: backBanner
+        // },
         {
             path: '/grocery',
             name: 'grocery',
             component: grocery,
-            //     children:[
-            //         {
-            //             path:'/grocery/groceryView',
-            //             name:'groceryView',
-            //             component: groceryView
-            //         },
-            //     ]
         },
-        // {
-        //     path:'/grocery',
-        //     redirect: '/grocery'
-        // },
-        // {
-        //     path: '/groceryView',
-        //     name: 'groceryView',
-        //     component: groceryView
-        // },
+        {
+            path: '/grocery/editGrocery',
+            name: 'editGrocery',
+            component: editGrocery,
+        },
         {
             path: '/inventory',
             name: 'inventory',
