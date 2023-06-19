@@ -1,5 +1,5 @@
 <template>
-    <div id="containerDiv">
+    <div id="footerMenu">
         <ul id="icons">
             <!-- #1 -->
             <li><router-link to="/grocery" id="name">
@@ -55,7 +55,7 @@ export default ({
 </script>
 
 <style scoped>
-#containerDiv {
+#footerMenu {
     width: 100%;
     height: 55px;
     background-color: #7bae63;
