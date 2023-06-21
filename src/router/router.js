@@ -12,7 +12,10 @@ import grocery from '../innerPages/footer/grocery.vue'
 import editGrocery from '../innerPages/footer/editGrocery.vue'
 
 import inventory from '../innerPages/footer/inventory.vue'
+
 import upload from '../innerPages/footer/upload.vue'
+import draft from '../innerPages/footer/draft.vue'
+
 import saved from '../innerPages/footer/saved.vue'
 import notif from '../innerPages/footer/notif.vue'
 
@@ -81,6 +84,11 @@ export default new Router({
             path: '/upload',
             name: 'upload',
             component: upload
+        },
+        {
+            path: '/draft',
+            name: 'draft',
+            component: draft
         },
         {
             path: '/saved',

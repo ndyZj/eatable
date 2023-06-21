@@ -50,7 +50,7 @@ export default ({
     return {
       router,
       grocery,
-      mainBanner :false,
+      mainBanner:false ,
       backBanner,
       // content: true,
       // grocery: false

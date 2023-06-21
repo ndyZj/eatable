@@ -1,7 +1,20 @@
 <template>
     <div id="containerDiv">
-        <button type="button" @click="hasHistory() ? $router.go(-1) : $router.push('/')">
-            &laquo; Back</button>
+        <ul>
+            <li>
+                <button type="button" @click="hasHistory() ? $router.go(-1) : $router.push('/')">
+                    &laquo; Back
+                </button>
+            </li>
+            <li>
+                <router-link to="/home">
+                    <img src="../../assets/Icon/home.svg">
+                </router-link>
+               
+            </li>
+        </ul>
+
+
     </div>
 </template>
 
@@ -25,7 +38,8 @@ export default ({
     background-color: #7bae63;
     color: white;
 }
-button{
+
+button {
     background-color: #7bae63;
     border: none;
     color: white;
@@ -34,5 +48,12 @@ button{
     height: 50px;
     width: 90px;
     text-align: center;
-}  
+}
+img{
+    width: 25px;
+    height: auto;
+    position: relative;
+    left:315px;
+    bottom: 38px;
+}
 </style>
