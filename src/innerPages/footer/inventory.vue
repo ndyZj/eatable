@@ -142,7 +142,7 @@
     background-color: rgb(123, 174, 99, 0.6);
     list-style: none;
     width: 300px;
-    height: 120px;
+    height: 115px;
     margin-left: 23px;
     margin-top: 15px;
     border-radius: 10px;
@@ -155,7 +155,7 @@
     background-color:rgb(242, 124, 0, 0.6);
     list-style: none;
     width: 300px;
-    height: 120px;
+    height: 110px;
     margin-left: 23px;
     margin-top: 15px;
     border-radius: 10px;
@@ -167,12 +167,12 @@
 #listText {
     list-style: none;
     margin-left: 10px;
-    margin-top: 8px;
+    margin-top: 5px;
     float: left;
-    font-size: 14px;
+    font-size: 13px;
 }
 #listText>li:nth-child(1){
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
 }
 
@@ -180,8 +180,8 @@
     width: 25px;
     height: auto;
     position: relative;
-    left: 55px;
-    top: 45px;
+    left: 45px;
+    top: 35px;
     float: left;
 }
 
@@ -189,8 +189,8 @@
     width: 25px;
     height: auto;
     position: relative;
-    left: 70px;
-    top: 45px;
+    left: 60px;
+    top: 35px;
     float: left;
 }
 </style>

@@ -20,7 +20,7 @@
 
 <script>
 import router from '../../router/router';
-
+ 
 export default ({
     methods: {
         hasHistory() {

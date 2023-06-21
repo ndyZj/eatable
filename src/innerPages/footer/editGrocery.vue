@@ -18,13 +18,23 @@
             </ul>
             <button id="addButton">+</button>
         </ul>
-        <button id="saveBtn">Save</button>
-        <button id="delBtn">Delete</button>
+        <button id="saveBtn" @click="hasHistory() ? $router.go(-1) : $router.push('/')">
+            Save
+        </button>
+        <button id="delBtn" @click="hasHistory() ? $router.go(-1) : $router.push('/')">
+            Delete
+        </button>
     </div>
 </template>
 
 <script>
-    
+    export default ({
+    methods: {
+        hasHistory() {
+            return window.history.length > 2
+        }
+    }
+})
 </script>
 
 <style scoped>

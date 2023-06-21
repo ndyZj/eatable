@@ -73,7 +73,7 @@
     background-color: rgb(123, 174, 99, 0.6);
     list-style: none;
     width: 285px;
-    height: 100px;
+    height: 90px;
     margin-left: 23px;
     margin-top: 15px;
     border-radius: 10px;
@@ -87,7 +87,7 @@
     background-color:rgb(242, 124, 0, 0.6);
     list-style: none;
     width: 300px;
-    height: 100px;
+    height: 90px;
     margin-left: 23px;
     margin-top: 15px;
     border-radius: 10px;
@@ -100,10 +100,10 @@
     margin-left: 10px;
     margin-top: 8px;
     float: left;
-    font-size: 14px;
+    font-size: 13px;
 }
 #listText>li:nth-child(1){
-    font-size: 15px;
+    font-size: 14px;
     font-weight: bold;
 }
 #listTextRed {

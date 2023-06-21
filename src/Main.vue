@@ -2,22 +2,19 @@
   <div id="app">
     <div v-if="mainBanner">
       <my-banner />
-      <my-menuBar />
     </div>
     <div v-else>
       <my-backBanner />
     </div>
-    <!-- <my-banner />
-    <my-menuBar /> -->
 
     <div v-if="router">
+      <my-content />
       <router-view />
     </div>
     <div v-else>
-      <my-content />
-      <!-- <my-grocery /> -->
+      <my-grocery />
     </div>
-    <my-footer />
+    <my-footer v-on:click="toSidePage" />
   </div>
 </template>
 
@@ -29,7 +26,6 @@ import backBanner from './innerPages/footer/backBanner.vue'
 
 
 import content from './Content.vue'
-import menuBar from './menuBar.vue'
 
 import footer from './Footer.vue'
 import grocery from './innerPages/footer/grocery.vue'
@@ -37,7 +33,6 @@ import grocery from './innerPages/footer/grocery.vue'
 export default ({
   components: {
     'my-banner': banner,
-    'my-menuBar': menuBar,
     'my-backBanner': backBanner,
 
     'my-content': content,
@@ -48,22 +43,22 @@ export default ({
   name: 'app',
   data() {
     return {
-      router,
-      grocery,
-      mainBanner:false ,
-      backBanner,
-      // content: true,
-      // grocery: false
+      router : true,
+      mainBanner :true,
+      content,
+      grocery
     }
   },
-  // methods:{
-  //   toGrocery(){
-  //     return{
-  //       router : false,
-  //       grocery : true
-  //     }
-  //   }
-  // },
+  methods:{
+    toSidePage(){
+      return{
+        router : false,
+        mainBanner : false,
+        content,
+        grocery
+      }
+    }
+  },
 })
 </script>
 

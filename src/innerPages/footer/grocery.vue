@@ -160,18 +160,16 @@ export default ({
 #editBtn {
     width: 25px;
     height: auto;
-    position: relative;
-    left: 85px;
-    top: 25px;
     float: left;
+    margin-top: 25px;
+    margin-left: 75px;
 }
 
 #deleteBtn {
     width: 25px;
     height: auto;
-    position: relative;
-    left: 105px;
-    top: 25px;
     float: left;
+    margin-top: 25px;
+    margin-left: 20px;
 }
 </style>

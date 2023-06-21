@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Main from './router'
 import home from '../Main.vue'
 
+import banner from '../Banner.vue'
 import burgerMenu from '../innerPages/burgerMenu/burgerMenu.vue'
 import contentPic from '../innerPages/content/contentPic.vue'
 
@@ -51,6 +52,11 @@ export default new Router({
             component: home
         },
         {
+            path: '/banner',
+            name: 'banner',
+            component: banner
+        },
+        {
             path: '/innerPages/burgerMenu/burgerMenu',
             name: 'burgerMenu',
             component: burgerMenu
@@ -60,11 +66,6 @@ export default new Router({
             name: 'contentPic',
             component: contentPic
         },
-        // {
-        //     path: '/grocery/backBanner',
-        //     name: 'backBanner',
-        //     component: backBanner
-        // },
         {
             path: '/grocery',
             name: 'grocery',

@@ -4,12 +4,12 @@
         <ul>
                 <li id="list">
                     <ul id="listText">
-                        <li>Recipe Name 1</li>
+                        <li>Chicken Satay with Peanut Sauce</li>
                         <li>Last edited: dd/mm/yyyy</li>
                     </ul>
 
                     <!-- fake button -->
-                    <router-link to="" id="editBtn">
+                    <router-link to="/upload" id="editBtn">
                         <img src="../../assets/Icon/edit.svg">
                     </router-link>
 
@@ -40,7 +40,13 @@
 </template>
 
 <script>
-
+export default ({
+    methods: {
+        hasHistory() {
+            return window.history.length > 2
+        }
+    }
+})
 </script>
 
 <style>
@@ -72,14 +78,19 @@
 }
 #listText {
     list-style: none;
-    margin-left: 10px;
     margin-top: 13px;
     float: left;
-    font-size: 14px;
+    font-size: 12px;
 }
 #listText>li:nth-child(1){
-    font-size: 17px;
+    font-size: 14px;
     font-weight: bold;
+    width: 150px;
+    height: 25px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /* border: red solid 1px; */
 }
 #editBtn {
     width: 25px;
