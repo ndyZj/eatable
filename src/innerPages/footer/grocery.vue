@@ -72,13 +72,13 @@ export default ({
 <style scoped>
 #grocery {
     width: 100%;
-    height: 500px;
+    height: 534px;
     background-color: white;
 }
 
 #menu {
     width: 100%;
-    height: 40px;
+    height: 75px;
     background-color: #2f6d22;
     list-style: none;
 }

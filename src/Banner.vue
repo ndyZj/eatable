@@ -5,23 +5,24 @@
                 <ul id="left">
                     <li>
                         <router-link to="/burgerMenu">
-                            <img id="menu" src="./assets/Icon/burgerMenu.svg">
-                        </router-link>
+                            <img id="burgerMenu" src="./assets/Icon/burgerMenu.svg">
+                        </router-link> 
                     </li>
                 </ul>
                 <ul id="middle">
                     <li>
                         <router-link to="/home">
                             <img id="logo" src="./assets/logo/logo-only.svg">
-                        </router-link>
+                        </router-link> 
                     </li>
                 </ul>
                 <ul id="right">
                     <li>
-                        <router-link to="#">
+                        <router-link to="/advSearch">
                             <img id="search" src="./assets/Icon/search.svg">
                         </router-link>
                     </li>
+            
                 </ul>
             </li>
         </ul>
@@ -51,13 +52,7 @@
 </template>
 
 <script>
-export default ({
-    data() {
-        return {
 
-        }
-    }
-})
 </script>
 
 <style scoped>
@@ -68,11 +63,10 @@ export default ({
 }
 
 #left {
-    /* border: red 1px solid; */
     width: 45px;
     height: 45px;
     margin-top: 3px;
-    margin-left: 10px;
+    margin-left: 5px;
     float: left;
     list-style: none;
 }
@@ -96,7 +90,7 @@ export default ({
     list-style: none;
 }
 
-#menu {
+#burgerMenu {
     width: 35px;
     padding-top: 12px;
     margin-left: 3px;

@@ -1,7 +1,14 @@
 <template>
-    <div id="uploadMenu">
-        <div><img src="../../assets/Image/food2.jpg"></div>
-        <div id="recipeName">Chicken Satay with Peanut Sauce</div>
+    <div id="recipe">
+        <div id="recipeImg"><img src="../../assets/Image/food2.jpg"></div>
+        <div id="recipeName">
+            <ul>
+                <li>Chicken Satay with Peanut Sauce</li>
+                <li>Recipe by UserName</li>
+                <li id="love"><img src="../../assets/Icon/love.svg"></li>
+                <li id="dislike"><img src="../../assets/Icon/dislike.svg"></li>
+            </ul>
+        </div>
         <ul id="foodTag">
             <li>Dinner</li>
             <li>Chicken</li>
@@ -63,13 +70,6 @@
                 <li>Serve hot with peanut sauce. Garnish with chopped bird chillies and shallots if you like it SPICY!</li>
             </ul>
         </div>
-        <ul>
-            <li id="saveBtn"><router-link to="/draft" id="link">Save to Draft</router-link></li>
-            <li id="postBtn"><router-link to="/recipe" id="link">Post</router-link></li>
-        </ul>
-        <ul>
-            <li style="list-style: none; margin-bottom: 80px;"></li>
-        </ul>
     </div>
 </template>
 
@@ -77,10 +77,11 @@
 
 </script>
 
-<style scoped>
-#uploadMenu {
+<style>
+#recipe {
     width: 100%;
-    height: 500px;
+    height: 470px;
+    padding-bottom: 30px;
     background-color: white;
     overflow: scroll;
 }
@@ -88,8 +89,7 @@
 ::-webkit-scrollbar {
     display: none;
 }
-
-img {
+#recipeImg > img{
     width: 100%;
     height: 220px;
     object-fit: cover;
@@ -97,19 +97,50 @@ img {
     overflow: hidden;
     /* border: red solid 1px; */
 }
-
 #recipeName {
     width: 100%;
-    height: 60px;
+    height: 80px;
     line-height: 60px;
     color: white;
     background-color: #2f6d22;
     margin-top: -5px;
     padding-left: 15px;
-    font-size: 14px;
-    /* border: blue solid 1px; */
+    
 }
-
+#recipeName >ul >li:nth-child(1) {
+    width: 210px;
+    height: 30px;
+    line-height: 30px;
+    padding-top: 10px;
+    list-style: none;
+    font-size: 12px;
+    font-weight: bold;
+    /* border: red solid 1px; */
+}
+#recipeName >ul >li:nth-child(2) {
+    width: 210px;
+    height: 30px;
+    line-height: 30px;
+    list-style: none;
+    font-size: 12px;
+    /* border: purple solid 1px; */
+}
+#love>img{
+    /* border: blue solid 1px; */
+    width: 30px;
+    height: auto;
+    float: left;
+    margin-left: 240px;
+    margin-top: -43px;
+}
+#dislike>img{
+    /* border: blue solid 1px; */
+    width: 30px;
+    height: auto;
+    float: left;
+    margin-left: 290px;
+    margin-top: -103px;
+}
 #foodTag > li{
     width: 65px;
     height: 30px;
@@ -137,40 +168,5 @@ img {
     margin-top: 5px;
     margin-bottom: 5px;
     padding-right: 20px;
-}
-
-#saveBtn {
-    width: 130px;
-    height: 40px;
-    background-color: #2f6d22;
-    border-radius: 5px;
-    border: none;
-    margin-left: 40px;
-    margin-top: 20px;
-    list-style: none;
-    text-align: center;
-    line-height: 40px;
-    font-size: 14px;
-    float: left;
-}
-
-#postBtn {
-    width: 130px;
-    height: 40px;
-    background-color: #f27c00;
-    border-radius: 5px;
-    border: none;
-    margin-left: 15px;
-    margin-top: 20px;
-    list-style: none;
-    text-align: center;
-    line-height: 40px;
-    font-size: 14px;
-    float: left;
-}
-
-#link {
-    text-decoration: none;
-    color: white;
 }
 </style>

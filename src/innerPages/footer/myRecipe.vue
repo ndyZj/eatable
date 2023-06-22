@@ -1,5 +1,5 @@
 <template>
-    <div id="saved">
+    <div id="myRecipe">
         <div id="profile">
             <ul>
                 <li id="circlePhoto"></li>
@@ -30,25 +30,22 @@
         </div>
         <div id="content">
             <ul>
-                <li id="foodPhoto"><img src="../../assets/Image/food10.jpg"></li>
+                <li id="foodPhoto"><img src="../../assets/Image/food7.jpg"></li>
                 <li>Recipe name 1</li>
                 <li id="love"><img src="../../assets/Icon/love.svg"></li>
-                <li id="dislike"><img src="../../assets/Icon/dislike.svg"></li>
-                <li id="delete"><img src="../../assets/Icon/delete-W.svg"></li>
+                <li>100</li>
             </ul>
             <ul>
-                <li id="foodPhoto"><img src="../../assets/Image/food9.jpg"></li>
+                <li id="foodPhoto"><img src="../../assets/Image/food6.png"></li>
                 <li>Recipe name 2</li>
                 <li id="love"><img src="../../assets/Icon/love.svg"></li>
-                <li id="dislike"><img src="../../assets/Icon/dislike.svg"></li>
-                <li id="delete"><img src="../../assets/Icon/delete-W.svg"></li>
+                <li>200</li>
             </ul>
             <ul>
-                <li id="foodPhoto"><img src="../../assets/Image/food8.jpg"></li>
+                <li id="foodPhoto"><img src="../../assets/Image/food4.jpg"></li>
                 <li>Recipe name 3</li>
                 <li id="love"><img src="../../assets/Icon/love.svg"></li>
-                <li id="dislike"><img src="../../assets/Icon/dislike.svg"></li>
-                <li id="delete"><img src="../../assets/Icon/delete-W.svg"></li>
+                <li>150</li>
             </ul>
         </div>
     </div>
@@ -58,8 +55,8 @@
 
 </script>
 
-<style scoped>
-#saved {
+<style>
+#myRecipe {
     width: 100%;
     height: 500px;
     background-color: white;
@@ -122,12 +119,14 @@
     background-size: 20px;
     background-position: 10px;
 }
-#menuBtn{
+
+#menuBtn {
     width: 100%;
     height: 45px;
     background-color: #2f6d22;
 }
-#menuBtn>ul>li{
+
+#menuBtn>ul>li {
     /* border: red solid 1px; */
     color: white;
     font-size: 13px;
@@ -138,28 +137,32 @@
     text-align: center;
     list-style: none;
 }
-#menuBtn>ul>li:nth-child(2){
+
+#menuBtn>ul>li:nth-child(1) {
     font-weight: bold;
     border-bottom: white solid 3px;
 }
-#content{
+
+#content {
     width: 100%;
     height: auto;
     background-color: #7bae63;
     padding-bottom: 50px;
     padding-top: 10px;
 }
-#content>ul{
+
+#content>ul {
     /* border: red solid 1px; */
     list-style: none;
     width: 320px;
     height: 120px;
     margin-top: 25px;
-    margin-left:23px;
+    margin-left: 23px;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 3px;
 }
-#foodPhoto>img{
+
+#foodPhoto>img {
     width: 140px;
     height: 100px;
     margin-top: 10px;
@@ -168,8 +171,12 @@
     object-position: center;
     overflow: hidden;
 }
-#content>ul>li{float: left;}
-#content>ul>li:nth-child(2){
+
+#content>ul>li {
+    float: left;
+}
+
+#content>ul>li:nth-child(2) {
     margin-top: 35px;
     margin-left: 20px;
     /* border: solid blue 1px; */
@@ -179,29 +186,17 @@
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-#love{
+
+#love {
     height: auto;
     width: 20px;
     margin-left: 25px;
     margin-top: 10px;
     /* border: red solid 1px; */
 }
-/* #love:hover{
-background-color: #2f6d22;
-mask-image: url(../../assets/Icon/love.svg);
--webkit-mask-image: url(../../assets/Icon/love.svg);
-mask-repeat: no-repeat;
-} */
-#dislike{
-    height: auto;
-    width: 20px;
+#content>ul>li:nth-child(4){
+    color: white;
     margin-left: 15px;
-    margin-top: 10px;
-}
-#delete{
-    height: auto;
-    width: 20px;
-    margin-left: 18px;
     margin-top: 10px;
 }
 </style>

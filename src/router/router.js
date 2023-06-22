@@ -1,12 +1,15 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Main from './router'
-import home from '../Main.vue'
+// import home from '../Main.vue'
 
+import home from '.././content.vue'
 import banner from '../Banner.vue'
 import burgerMenu from '../innerPages/burgerMenu/burgerMenu.vue'
-import contentPic from '../innerPages/content/contentPic.vue'
+import advSearch from '../innerPages/search/advSearch.vue'
+import searchList from '../innerPages/search/searchList.vue'
 
+// import contentPic from '../innerPages/content/contentPic.vue'
 // import backBanner from '../innerPages/footer/backBanner.vue'
 
 import grocery from '../innerPages/footer/grocery.vue'
@@ -16,8 +19,12 @@ import inventory from '../innerPages/footer/inventory.vue'
 
 import upload from '../innerPages/footer/upload.vue'
 import draft from '../innerPages/footer/draft.vue'
-
+import recipe from '../innerPages/content/recipe.vue'
+import myRecipe from '../innerPages/footer/myRecipe.vue'
 import saved from '../innerPages/footer/saved.vue'
+
+import settings from '../innerPages/footer/settings.vue'
+
 import notif from '../innerPages/footer/notif.vue'
 
 
@@ -42,7 +49,7 @@ Vue.config.productionTip = false
 export default new Router({
     routes: [
         {
-            path: '/',
+            path: '/Main',
             name: 'Main',
             component: Main
         },
@@ -57,15 +64,25 @@ export default new Router({
             component: banner
         },
         {
-            path: '/innerPages/burgerMenu/burgerMenu',
+            path: '/burgerMenu',
             name: 'burgerMenu',
             component: burgerMenu
         },
         {
-            path: '/contentPic',
-            name: 'contentPic',
-            component: contentPic
+            path: '/advSearch',
+            name: 'advSearch',
+            component: advSearch
         },
+        {
+            path: '/searchList',
+            name: 'searchList',
+            component: searchList
+        },
+        // {
+        //     path: '/contentPic',
+        //     name: 'contentPic',
+        //     component: contentPic
+        // },
         {
             path: '/grocery',
             name: 'grocery',
@@ -92,9 +109,24 @@ export default new Router({
             component: draft
         },
         {
+            path: '/recipe',
+            name: 'recipe',
+            component: recipe
+        },
+        {
+            path: '/myRecipe',
+            name: 'myRecipe',
+            component: myRecipe
+        },
+        {
             path: '/saved',
             name: 'saved',
             component: saved
+        },
+        {
+            path: '/settings',
+            name: 'settings',
+            component: settings
         },
         {
             path: '/notif',

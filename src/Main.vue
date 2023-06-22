@@ -1,20 +1,21 @@
 <template>
   <div id="app">
-    <div v-if="mainBanner">
+    <!-- <div v-if="mainBanner">
       <my-banner />
     </div>
     <div v-else>
       <my-backBanner />
-    </div>
-
-    <div v-if="router">
-      <my-content />
+    </div> -->
+    <my-banner />
+    <router-view />
+    <!-- <div v-if="router">
       <router-view />
-    </div>
-    <div v-else>
-      <my-grocery />
-    </div>
-    <my-footer v-on:click="toSidePage" />
+    </div> -->
+    <!-- <div v-else> -->
+      <!-- <my-grocery /> -->
+    <!-- </div> -->
+    <my-footer />
+    <!-- <my-footer v-on:click="toSidePage" /> -->
   </div>
 </template>
 
@@ -43,22 +44,18 @@ export default ({
   name: 'app',
   data() {
     return {
-      router : true,
-      mainBanner :true,
-      content,
-      grocery
+      router,
+
     }
   },
-  methods:{
-    toSidePage(){
-      return{
-        router : false,
-        mainBanner : false,
-        content,
-        grocery
-      }
-    }
-  },
+  // methods:{
+  //   toSidePage(){
+  //     return{
+  //       router : false,
+
+  //     }
+  //   }
+  // },
 })
 </script>
 
